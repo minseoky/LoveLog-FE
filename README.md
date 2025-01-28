@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# LoveLog ❤️
+**LoveLog**는 커플들이 함께한 추억을 기록하고 공유할 수 있는 특별한 공간을 제공합니다. 데이트한 장소, 함께한 활동, 그리고 소중한 순간들을 기록하여 둘만의 소중한 이야기를 만들어보세요.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 주요 기능(예정) ✨
+1. **추억 공유**
+    - 커플 간의 사진, 글, 영상 등을 공유할 수 있는 기능을 제공합니다.
+    - 추억을 되돌아보며 특별한 순간을 다시 느껴보세요.
 
-In the project directory, you can run:
+2. **데이트 장소 기록**
+    - 데이트한 장소를 지도에 기록하고, 방문했던 장소의 추억을 저장할 수 있습니다.
+    - 장소에 대한 후기와 함께 재방문 여부를 설정할 수 있습니다.
 
-### `npm start`
+3. **확장 가능성**
+    - 추후 **추억 분석**, **캘린더 연동**, **추천 데이트 장소** 등의 기능 추가를 고려중입니다.
+    - 커플 간의 특별한 순간을 더욱 풍부하게 만들어갈 계획입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 기술 스택 🛠️
+- **Frontend**: `React.js`
+- **Backend**: `Spring WebFlux`
+- **Database**: `MySQL`, `Redis`
+- **Infra**: Only on-premise server with `Kubernetes`, `Minio`, `MetalLB external load balancer`, and so on...
