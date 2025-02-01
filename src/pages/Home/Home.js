@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from "../components/Navbar/NavBar";
+import Navbar from "../../components/Navbar/NavBar";
 import { HeroSection, Title, Subtitle, CTAButton, FeatureContainer, FeatureItem, FeaturesSection, FooterCTA } from "./Home.styles";
 import {useNavigate} from "react-router-dom";
 
