@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
-// 네비게이션 바 전체 스타일
+// 네비게이션 바 전체 스타일 (항상 상단 고정)
 export const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     background-color: #fff;
-    border-bottom: 2px solid #ddd; /* 기존 navbar 테두리 */
-    position: relative;
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    
+    @media (max-width: 768px) {
+    height: 50px;
+    }
 `;
 
 // 로고 컨테이너
@@ -103,10 +110,10 @@ export const TryButton = styled.button`
 // 모바일 메뉴 컨테이너 (하단 여백 추가)
 export const MobileMenu = styled.div`
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease-out, padding-bottom 0.3s ease-out;
     width: 100%;
-    position: absolute;
-    top: 100%; /* 네비게이션 바 바로 아래 */
+    position: fixed; /* ✅ 네비바 아래에서 열리도록 고정 */
+    top: 72px; /* ✅ 네비게이션 바 아래에서 시작 */
     left: 0;
     background-color: #fff;
     border-bottom: 2px solid #ddd;
@@ -117,7 +124,7 @@ export const MobileMenu = styled.div`
         align-items: center;
         width: 100%;
         max-height: ${({ isOpen }) => (isOpen ? "500px" : "0")};
-        padding-bottom:  ${({ isOpen }) => (isOpen ? "0.5rem" : "0")};
+        padding-bottom:  ${({ isOpen }) => (isOpen ? "5px" : "0")};
     }
 
     @media (min-width: 769px) {
@@ -139,7 +146,7 @@ export const ToggleButton = styled.button`
     transition: color 0.3s ease;
 
     position: absolute;
-    right: 1rem;
+    right: 2.5rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10; /* 리스트보다 위에 위치 */
