@@ -14,7 +14,7 @@ const Home = () => {
             <HeroSection>
                 <Title>우리의 사랑을 기록하는 <br/> 가장 특별한 공간</Title>
                 <Subtitle>둘만의 소중한 순간을 기록하고, 다시 떠올리세요 💖</Subtitle>
-                <CTAButton>추억 남기러 가</CTAButton>
+                <CTAButton>추억 남기러 가기</CTAButton>
             </HeroSection>
 
             <FeaturesSection>
