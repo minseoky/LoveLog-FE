@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // 햄버거 & 닫기 아이콘 추가
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import {
     Nav,
     LogoContainer,
@@ -17,17 +18,17 @@ const Navbar = ({ navItems }) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
     const [menuHeight, setMenuHeight] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (menuRef.current) {
             setMenuHeight(isOpen ? menuRef.current.scrollHeight : 0);
         }
-    }, [isOpen, navItems]); // navItems 변경 시 높이 업데이트
+    }, [isOpen, navItems]);
 
     return (
         <Nav>
-            {/* 로고 컨테이너 */}
-            <LogoContainer>
+            <LogoContainer onClick={() => navigate("/")}>
                 <LogoImage src="lovelog.png" alt="LoveLog Logo" />
                 <LogoText>LoveLog</LogoText>
             </LogoContainer>
@@ -37,21 +38,27 @@ const Navbar = ({ navItems }) => {
                 {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
             </ToggleButton>
 
-            {/* 일반 웹: 네비게이션 메뉴 오른쪽 정렬 */}
+            {/* 일반 웹: 네비게이션 메뉴 */}
             <DesktopMenu>
                 {navItems.map((item, index) => (
-                    <NavButton key={index}>{item}</NavButton>
+                    <NavButton key={index} onClick={() => navigate(item.path)}>
+                        {item.label}
+                    </NavButton>
                 ))}
-                <TryButton>Try For Free</TryButton>
+                <TryButton onClick={() => navigate("/signup")}>무료로 시작하기</TryButton>
             </DesktopMenu>
 
             {/* 모바일 메뉴 */}
             <MobileMenu ref={menuRef} style={{ maxHeight: menuHeight + "px" }} isOpen={isOpen}>
                 <NavItems>
                     {navItems.map((item, index) => (
-                        <NavButton key={index}>{item}</NavButton>
+                        <NavButton key={index} onClick={() => { navigate(item.path); setIsOpen(false); }}>
+                            {item.label}
+                        </NavButton>
                     ))}
-                    <TryButton>Try For Free</TryButton>
+                    <TryButton onClick={() => { navigate("/signup"); setIsOpen(false); }}>
+                        무료로 시작하기
+                    </TryButton>
                 </NavItems>
             </MobileMenu>
         </Nav>

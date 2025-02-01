@@ -7,6 +7,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     padding: 0.75rem 1rem;
     background-color: #fff;
+    border-bottom: 2px solid #ddd;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,6 +45,7 @@ export const DesktopMenu = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-right: 2em; /* 네비게이션 메뉴 왼쪽으로 이동 */
 
     @media (max-width: 768px) {
         display: none;
@@ -116,7 +118,7 @@ export const MobileMenu = styled.div`
     top: 72px; /* ✅ 네비게이션 바 아래에서 시작 */
     left: 0;
     background-color: #fff;
-    border-bottom: 2px solid #ddd;
+    border-bottom: ${({ isOpen }) => (isOpen ? "2px solid #ddd" : "0")};
 
     @media (max-width: 768px) {
         display: flex;
@@ -124,7 +126,7 @@ export const MobileMenu = styled.div`
         align-items: center;
         width: 100%;
         max-height: ${({ isOpen }) => (isOpen ? "500px" : "0")};
-        padding-bottom:  ${({ isOpen }) => (isOpen ? "5px" : "0")};
+        padding-bottom:  ${({ isOpen }) => (isOpen ? "1em" : "0")};
     }
 
     @media (min-width: 769px) {
