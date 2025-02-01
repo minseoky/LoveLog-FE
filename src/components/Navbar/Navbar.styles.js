@@ -30,7 +30,7 @@ export const LogoContainer = styled.div`
 // 로고 이미지
 export const LogoImage = styled.img`
     width: 36px;
-    height: 40px;
+    height: 34px;
     margin-right: 0.5rem;
 `;
 
