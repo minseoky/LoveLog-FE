@@ -1,12 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
     SignInContainer,
     SignInBox,
     InputField,
     SignInButton,
+    SocialButton,
+    GoogleIcon,
+    KakaoIcon,
     Title,
     Label,
-    FormGroup
+    FormGroup,
+    SignUpButton,
+    Divider, DividerText
 } from "./SignIn.styles";
 
 const SignIn = () => {
@@ -15,7 +20,15 @@ const SignIn = () => {
 
     const handleSignIn = (e) => {
         e.preventDefault();
-        console.log("로그인 시도: ", {email, password});
+        console.log("로그인 시도: ", { email, password });
+    };
+
+    const handleGoogleLogin = () => {
+        console.log("구글 로그인 시도");
+    };
+
+    const handleKakaoLogin = () => {
+        console.log("카카오 로그인 시도");
     };
 
     return (
@@ -44,7 +57,23 @@ const SignIn = () => {
                         />
                     </FormGroup>
                     <SignInButton type="submit">로그인</SignInButton>
+                    <SignUpButton>회원가입</SignUpButton>
                 </form>
+
+                {/* 구분선과 안내 문구 */}
+                <Divider>
+                    <DividerText>또는 소셜 로그인으로 간편하게 시작하세요!</DividerText>
+                </Divider>
+
+                {/* 소셜 로그인 버튼 */}
+                <SocialButton onClick={handleGoogleLogin} style={{ backgroundColor: "#ffffff", color: "#555" }}>
+                    <GoogleIcon src="/icons/google-logo.png" alt="Google" />
+                    Google 로그인
+                </SocialButton>
+                <SocialButton onClick={handleKakaoLogin} style={{ backgroundColor: "#FEE500", color: "#3C1E1E" }}>
+                    <KakaoIcon src="/icons/kakao-logo.png" alt="Kakao" />
+                    카카오 로그인
+                </SocialButton>
             </SignInBox>
         </SignInContainer>
     );
