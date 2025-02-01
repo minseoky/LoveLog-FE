@@ -45,7 +45,7 @@ const Navbar = ({ navItems }) => {
                         {item.label}
                     </NavButton>
                 ))}
-                <TryButton onClick={() => navigate("/signin")}>
+                <TryButton onClick={() => navigate("/sign-in")}>
                     로그인
                 </TryButton>
             </DesktopMenu>
@@ -58,7 +58,7 @@ const Navbar = ({ navItems }) => {
                             {item.label}
                         </NavButton>
                     ))}
-                    <TryButton onClick={() => { navigate("/signin"); setIsOpen(false); }}>
+                    <TryButton onClick={() => { navigate("/sign-in"); setIsOpen(false); }}>
                         로그인
                     </TryButton>
                 </NavItems>
