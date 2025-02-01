@@ -24,6 +24,7 @@ export const Nav = styled.nav`
 export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
+    cursor: pointer;
 `;
 
 // 로고 이미지
@@ -138,9 +139,9 @@ export const MobileMenu = styled.div`
 export const ToggleButton = styled.button`
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
-    padding: 8px;
+    padding: 1em;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -35,7 +35,7 @@ const Navbar = ({ navItems }) => {
 
             {/* 햄버거 버튼 (모바일에서만 표시) */}
             <ToggleButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
-                {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+                {isOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
             </ToggleButton>
 
             {/* 일반 웹: 네비게이션 메뉴 */}
