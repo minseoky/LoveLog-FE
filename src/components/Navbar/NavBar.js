@@ -45,7 +45,9 @@ const Navbar = ({ navItems }) => {
                         {item.label}
                     </NavButton>
                 ))}
-                <TryButton onClick={() => navigate("/signup")}>무료로 시작하기</TryButton>
+                <TryButton onClick={() => navigate("/signup")}>
+                    회원가입 / 로그인
+                </TryButton>
             </DesktopMenu>
 
             {/* 모바일 메뉴 */}
@@ -57,7 +59,7 @@ const Navbar = ({ navItems }) => {
                         </NavButton>
                     ))}
                     <TryButton onClick={() => { navigate("/signup"); setIsOpen(false); }}>
-                        무료로 시작하기
+                        회원가입 / 로그인
                     </TryButton>
                 </NavItems>
             </MobileMenu>
